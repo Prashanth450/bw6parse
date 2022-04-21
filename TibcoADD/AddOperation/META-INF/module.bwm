@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ADD="http://www.tibco.com/ADD/" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:filepersistence="http://xsd.tns.tibco.com/bw/models/binding/soap/filepersistence" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_SYIOECnMEeytme67jtu-LA" targetNamespace="http://tns.tibco.com/bw/composite/AddOperation" name="AddOperation" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_8uuAMSnMEeytme67jtu-LA" name="ADD" promote="ComponentADD/ADD">
+    <sca:interface.wsdl xmi:id="_8u3xMinMEeytme67jtu-LA" interface="http://www.tibco.com/ADD/#wsdl.interface(ADD)" scaext:wsdlLocation="../Service%20Descriptors/ADD.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_8vA7ICnMEeytme67jtu-LA" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/5da4ef72e69e49aa85f70de9db189e51/SOAPServiceBinding" portTypeQName="ADD:ADD" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/AddOperation/Service%20Descriptors/ADD.wsdl">
+      <bindingType xmi:id="_8vKsICnMEeytme67jtu-LA" style="RPC"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_Gs3AICnUEeytme67jtu-LA" endpointURI="/SOAPServiceBinding/aDD/" httpConnector="addoperation.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_8vT2ECnMEeytme67jtu-LA" operationName="AddOperation" action="AddOperation" actionNeeded="true">
+        <bindingType xmi:id="_8vT2ESnMEeytme67jtu-LA"/>
+        <messageConfiguration xmi:id="_8vT2EinMEeytme67jtu-LA" messageQName="ADD:AddOperationRequest" wsdlLocation="platform:/resource/AddOperation/Service%20Descriptors/ADD.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_8vT2EynMEeytme67jtu-LA" partName="AddOperationRequest" partTypeName="ADD:Req"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_8vT2FCnMEeytme67jtu-LA" messageQName="ADD:AddOperationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/AddOperation/Service%20Descriptors/ADD.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_8vT2FSnMEeytme67jtu-LA" partName="AddOperationResponse" partTypeName="ADD:Res"/>
+        </messageConfiguration>
+        <context xmi:id="_8vT2FinMEeytme67jtu-LA">
+          <inputMapping xmi:id="_8vT2FynMEeytme67jtu-LA"/>
+          <outputMapping xmi:id="_8vT2GCnMEeytme67jtu-LA" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+      <persistenceConfiguration xsi:type="filepersistence:FilePersistenceConfiguration" xmi:id="_YAd18CnUEeytme67jtu-LA" id="persistenceType.FILE" thresholdUnits="Bytes"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_8vT2GSnMEeytme67jtu-LA" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_TYEoICnMEeytme67jtu-LA" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TYNyECnMEeytme67jtu-LA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TYXjECnMEeytme67jtu-LA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TYhUECnMEeytme67jtu-LA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TYqeACnMEeytme67jtu-LA" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TYqeASnMEeytme67jtu-LA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TY0PACnMEeytme67jtu-LA" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TY9Y8CnMEeytme67jtu-LA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TZHJ8CnMEeytme67jtu-LA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_S9_7QCnMEeytme67jtu-LA" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_S9_7QSnMEeytme67jtu-LA" processName="addoperation.Process"/>
+  </sca:component>
+  <sca:component xmi:id="_8ukPMCnMEeytme67jtu-LA" name="ComponentADD" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_8ukPMSnMEeytme67jtu-LA" processName="addoperation.ADD"/>
+    <sca:service xmi:id="_8ukPMinMEeytme67jtu-LA" name="ADD">
+      <sca:interface.wsdl xmi:id="_8uuAMCnMEeytme67jtu-LA" interface="http://www.tibco.com/ADD/#wsdl.interface(ADD)" scaext:wsdlLocation="../Service%20Descriptors/ADD.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
